@@ -23,6 +23,8 @@
 
 # 3、Dart2中文文档
 # https://www.kancloud.cn/marswill/dark2_document/709087
+# 4、Dart与Flutter中文资料/教程/视频收集整理贴
+# https://www.dart-china.org/t/topic/815
 
 
 
