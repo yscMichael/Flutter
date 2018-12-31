@@ -12,7 +12,9 @@
 # https://flutterawesome.com/
 # 5、Flutter例题(github)
 *     5.1、https://github.com/CarGuo/GSYGithubAppFlutter   
-*       
+*     5.2、https://github.com/Solido/awesome-flutter
+*     5.3、https://github.com/Solido/awesome-flutter
+*     5.4、https://material.io/develop/
 
 
 # Dart相关学习资料汇总

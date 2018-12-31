@@ -1,13 +1,21 @@
+//这里是导入Material UI组件库
 import 'package:flutter/material.dart';
+import 'package:english_words/english_words.dart';
 
+//main提供程序入口、runApp启动应用(参数是Widget)、MyApp代笔当前Flutter应用
 void main() => runApp(MyApp());
 
+//MyApp是当前应用的根，也是一个Widget
+//StatelessWidget是无状态的Widget
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
+  //widget都会包含一个build方法，用于构建UI界面
   Widget build(BuildContext context) {
+    //MaterialApp是Material提供的Flutter App框架，用于设置应用的名称、主题、语言、首页以及路由列表
+    //MaterialApp也是一个Widget
     return MaterialApp(
       title: 'Flutter Demo',
+      //主题配置
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -18,12 +26,28 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      //注册路由表
+      routes:{
+        "new_page":(context)=>NewRoute(),
+        "tip_widgets":(context)=>EchoRoute("内容固定")
+      } ,
+      //Flutter应用首页
+      home: MyHomePage(title: 'Flutter Demo Home Page++'),
     );
   }
 }
+
+//StatefulWidget是有状态的Widget
+//StatelessWidget和StatefulWidget的区别
+//1、StatefulWidget可以拥有状态，这些状态是生命周期是可以改变的;而StatelessWidget不可以改变
+//2、State fulWidget拥有两个类:
+//   StatefulWidget类，本身是不变的
+//   一个是State类，在生命周期中是可能发生改变的
+//
+//这里MyHomePage的状态类是_MyHomePageState
+//build方法放在了_MyHomePageState而不是MyHomePage
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -43,10 +67,14 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
+//_MyHomePageState的build方法
+//疑问：怎么确定是_MyHomePageState的build方法？？？
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
+  //点击按钮调用这个方法
   void _incrementCounter() {
+    //这个方法能够先保证执行_counter++,再调用下面的build方法以达到重新渲染UI的目的
     setState(() {
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
@@ -57,6 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  //以下是构建UI界面
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -65,6 +94,9 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
+
+    //Scaffold是Material库中提供的一个widget,提供默认的导航栏、标题、主屏幕widget树
+    //的body属性
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
@@ -98,6 +130,26 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.display1,
             ),
+            FlatButton(
+              child: Text("open new route"),
+              textColor: Colors.blue,
+              onPressed: (){
+                Navigator.pushNamed(context, "new_page");
+                //跳转到新路由界面
+                //Navigator.push(context, new MaterialPageRoute(builder: (context){
+                //    return new NewRoute();
+                //}));
+              },
+            ),
+            FlatButton(
+              child: Text("open Echo route"),
+              textColor: Colors.green,
+              onPressed: (){
+                Navigator.pushNamed(context, "tip_widgets");
+              },
+            ),
+            //生成随机数Widget
+            RandomWordsWidget()
           ],
         ),
       ),
@@ -109,3 +161,54 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+
+//新建一个路由(测试跳转界面)
+class NewRoute extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("New Route"),
+      ),
+      body: Center(
+        child: Text("This is new route"),
+      ),
+    );
+  }
+}
+
+//路由传递参数
+class EchoRoute extends StatelessWidget{
+  EchoRoute(this.tip);
+  final String tip;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Echo route"),
+      ),
+      body: Center(
+        //回显tip内容
+        child: Text(tip),
+      ),
+    );
+  }
+}
+
+//导入第三方库
+class RandomWordsWidget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    //生成随机字符串
+    final wordPair = new WordPair.random();
+    return Padding(
+      padding: const EdgeInsets.all(0.8),
+      child: new Text(wordPair.toString()),
+    );
+  }
+}
+
+
+
+
