@@ -3,7 +3,138 @@ import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
 //main提供程序入口、runApp启动应用(参数是Widget)、MyApp代笔当前Flutter应用
-void main() => runApp(MyApp());
+void main() => runApp(TestFlatButtonWIdget());
+
+//第一个App
+class MyFirstApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Welcome to Flutter Title',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Welcome to Flutter'),
+        ),
+        body: Center(
+          child: Text('Hello World'),
+        ),
+      ),
+    );
+  }
+}
+
+//Text 组件相关属性
+class TestTextWidget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Text Widget',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Text'),
+        ),
+        body: Center(
+            child: Text(
+              'Test Text Widget Test Text Widget Test Text Widget Test Text Widget Test Text Widget Test Text Widget',
+              textAlign: TextAlign.end,//对齐方式
+              textDirection:TextDirection.ltr,
+              maxLines: 5,//最大行数
+              overflow: TextOverflow.ellipsis,//文字溢出展示样式设置;clip:直接切断,ellipsis:省略号,fade:上下渐变效果
+              style: TextStyle(//可以设置其它特殊属性
+                fontSize: 25.0,
+                color: Color.fromARGB(255, 255, 150, 150),
+                decoration:TextDecoration.underline,
+                decorationStyle:TextDecorationStyle.solid
+              ),
+            ),
+        ),
+      ),
+    );
+  }
+}
+
+//Text rich组件相关属性
+class TestTextRichWidget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Text.rich Widget',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Text.rich'),
+        ),
+        body: Center(
+          child: Text.rich(
+              TextSpan(
+                text: 'Hello ',
+                children: <TextSpan>[
+                  TextSpan(
+                    text: ' beautiful',
+                    style: TextStyle(
+                      fontStyle: FontStyle.italic,
+                      color: Colors.red
+                    )
+                  ),
+                  TextSpan(
+                    text: ' world',
+                    style: TextStyle(
+                        fontWeight:FontWeight.bold,
+                        color:Colors.blue
+                    )
+                  )
+                ],
+              )
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//RaisedButton使用
+class TestRaisedButtonWidget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('RaisedButton使用'),
+        ),
+        body: Center(
+          child: RaisedButton(
+              child: Text('RaisedButton'),
+              onPressed: (){
+                print('点击RaisedButtonRaisedButton');
+              },
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//FlatButton使用
+class TestFlatButtonWIdget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('FlatButton使用'),
+        ),
+        body: Center(
+          child: FlatButton(
+              onPressed: (){
+                print('点击FlatButton---');
+              },
+              child: Text('我是FlatButton')),
+        ),
+      ),
+    );
+  }
+}
+
+//ButtonBar
 
 //MyApp是当前应用的根，也是一个Widget
 //StatelessWidget是无状态的Widget
