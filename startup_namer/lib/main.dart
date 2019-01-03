@@ -1,8 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'demo/chapter01.dart';
+import 'demo/chapter02.dart';
 
-void main() => runApp(MyApp());
+//void main() => runApp(MyApp());
+void main(){
+    runApp(
+      MaterialApp(
+        title: 'My app',
+        //home: MyScaffold(),
+        home: TutorialHome(),
+      )
+    );
+}
 
+//第一个App
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
