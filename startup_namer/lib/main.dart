@@ -9,6 +9,9 @@ class MyApp extends StatelessWidget{
     final wordPair = WordPair.random();
     return MaterialApp(
       title: 'Startup Name Generator',
+      theme: ThemeData(
+        primaryColor: Colors.white
+      ),
       home: RandomWords(),
 //      title: 'Welcome to Flutter',
 //      home: Scaffold(
@@ -45,6 +48,12 @@ class RandomWordsState extends State<RandomWords>{
     return Scaffold(
       appBar: AppBar(
         title: Text('Startup Name Generator'),
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(Icons.list),
+              onPressed: _pushSaved
+          )
+        ],
       ),
       body: _buildSuggestions(),
     );
@@ -88,8 +97,30 @@ class RandomWordsState extends State<RandomWords>{
           },
       );
     }
-}
 
+    //5、进入到下一个界面
+    void _pushSaved(){
+        //导航管理器栈
+        Navigator.of(context).push(
+            //新建路由界面
+            MaterialPageRoute(builder: (context){
+              //构建cell的UI(这里返回一个变量)
+              final tiles = _saved.map((pair){
+                                  return ListTile(title: Text(pair.asPascalCase,style: _biggerFont));
+                            });
+              //将上述变量转变成数组
+              final divided = ListTile.divideTiles(context: context,tiles: tiles).toList();
+              //返回整个界面
+              return Scaffold(
+                appBar: AppBar(
+                  title: Text('Saved Suggestions'),
+                ),
+                body: ListView(children: divided),
+              );
+            })
+        );
+    }
+}
 
 
 //笔记:
