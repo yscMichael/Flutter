@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//MaterialApp组件使用
 //项目中是否使用MaterialApp完全是可选的
 //Scaffold是Material中主要布局组件
 
