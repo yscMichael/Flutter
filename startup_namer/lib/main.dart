@@ -4,16 +4,24 @@ import 'demo/chapter01.dart';
 import 'demo/chapter02.dart';
 import 'demo/chapter03.dart';
 import 'demo/chapter04.dart';
+import 'demo/chapter05.dart';
 
 //void main() => runApp(MyApp());
 void main(){
     runApp(
       MaterialApp(
-        title: 'My app',
+        title: 'Shopping App',
         //home: MyScaffold(),
         //home: TutorialHome(),
         //home: TestButton(),
-        home: TestCalculator(),
+        //home: TestCalculator(),
+        home: ShoppingList(
+          products: <Product>[
+            Product(name: 'Eggs'),
+            Product(name: 'Flour'),
+            Product(name: 'Chocolate chips'),
+          ],
+        ),
       )
     );
 }
