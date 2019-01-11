@@ -3,6 +3,7 @@ import 'package:english_words/english_words.dart';
 import 'demo/chapter01.dart';
 import 'demo/chapter02.dart';
 import 'demo/chapter03.dart';
+import 'demo/chapter04.dart';
 
 //void main() => runApp(MyApp());
 void main(){
@@ -11,7 +12,8 @@ void main(){
         title: 'My app',
         //home: MyScaffold(),
         //home: TutorialHome(),
-        home: TestButton(),
+        //home: TestButton(),
+        home: TestCalculator(),
       )
     );
 }
