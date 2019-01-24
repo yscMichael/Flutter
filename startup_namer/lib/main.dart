@@ -5,19 +5,10 @@ import 'demo/chapter02.dart';
 import 'demo/chapter03.dart';
 import 'demo/chapter04.dart';
 import 'demo/chapter05.dart';
+import 'demo/Container/Container.dart';
 
 //void main() => runApp(MyApp());
 void main(){
-//  runApp(
-//      Center(
-//            child: Container(
-//               color: Colors.green,
-//               child: Text("Flutter CheatSheet."),
-//               //child: Text("Flutter CheatSheet."),
-//            ),
-//      )
-//  );
-
     runApp(
       MaterialApp(
         title: 'Shopping App',
@@ -32,66 +23,9 @@ void main(){
         //    Product(name: 'Chocolate chips'),
         //  ],
         //),
-        home: Center(
-            child: Container(
-                //color: Colors.green[100],
-                //color: Color.fromARGB(255, 66, 165, 245),
-                //alignment: AlignmentDirectional(0.0, 0.0),
-
-                decoration: BoxDecoration(
-                  color: Colors.purple,
-                  gradient: LinearGradient(
-                      colors: [Colors.red, Colors.cyan, Colors.purple, Colors.lightGreenAccent],
-                      begin: Alignment.centerRight,
-                      end:Alignment.centerLeft,
-                      stops: [0.3, 0.5, 0.6, 0.7],
-                      //end: Alignment(0.8, 0.0),
-                      tileMode: TileMode.clamp,
-                  ),
-                ),
-
-                child: FlutterLogo(
-                  size: 200,
-                ),
-//                child: Container(
-//                  color: Colors.green,
-//                  //child: Text("Flutter"),
-////                  constraints: BoxConstraints.expand(
-////                    width: 350,
-////                    height: 400
-////                  ),
-//                //margin: EdgeInsets.all(20.0),
-//                //  margin: EdgeInsets.symmetric(
-//                //    vertical: 20,
-//                //    horizontal: 50,
-//                //  ),
-//
-//                //margin: EdgeInsets.fromLTRB(20, 30, 40, 50),
-//
-//                margin: EdgeInsets.only(
-//                  left: 20.0,
-//                  bottom: 40.0,
-//                  top: 50.0
-//                ),
-//                padding: EdgeInsets.all(10.0),
-//                child: Text('Flutter Cheatsheet'),
-//                transform: Matrix4.rotationZ(0.5),
-//                //constraints: BoxConstraints.expand(),
-////                  constraints: BoxConstraints(
-////                    maxHeight: 300,
-////                    maxWidth: 200,
-////                    minWidth: 150,
-////                    minHeight: 150
-////                  ),
-//                ),
-//                child: Text(
-//                       "Flutter CheatSheet.",
-//                       style: TextStyle(
-//                         fontSize: 40,
-//                       ),
-//                ),
-            ),
-        ),
+        //Container使用
+        //home: Color_Property_Colors(),
+        home: Color_Property_Color(),
       )
     );
 }
