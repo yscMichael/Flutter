@@ -25,7 +25,11 @@ void main(){
         //),
         //Container使用
         //home: Color_Property_Colors(),
-        home: Color_Property_Color(),
+        //home: Color_Property_Color(),
+        //home: Child_Property(),
+        //home: Alignment_Property(),
+        //home: Alignment_FractionalOffset(),
+        home: Alignment_AlignmentDirectional(),
       )
     );
 }
