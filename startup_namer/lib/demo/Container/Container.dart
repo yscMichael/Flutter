@@ -276,10 +276,10 @@ class Padding_Property_EdgeInsets_all extends StatelessWidget{
 
 
 //Decoration Property
-//class Decoration_Property
-
+//在BoxDecoration文件中详解
 
 //ForegroundDecoration Property
+//在BoxDecoration文件中详解
 
 //Transform Property
 class Transform_Property extends StatelessWidget{
