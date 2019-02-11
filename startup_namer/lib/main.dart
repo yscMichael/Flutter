@@ -29,7 +29,15 @@ void main(){
         //home: Child_Property(),
         //home: Alignment_Property(),
         //home: Alignment_FractionalOffset(),
-        home: Alignment_AlignmentDirectional(),
+        //home: Alignment_AlignmentDirectional(),
+        //home: Constraints_Property_NoChild(),
+        //home: Constraints_Property_HasChild(),
+        //home: Constraints_Property_HasChild_AllScreen(),
+        //home: Margin_Property_EdgeInsets_all(),
+        //home: Margin_Property_EdgeInsets_symmetric(),
+        //home: Margin_Property_EdgeInsets_fromLTRB(),
+        //home: Margin_Property_EdgeInsets_only(),
+        home: Padding_Property_EdgeInsets_all(),
       )
     );
 }

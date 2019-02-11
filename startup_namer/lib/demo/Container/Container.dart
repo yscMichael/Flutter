@@ -88,15 +88,189 @@ class Alignment_AlignmentDirectional extends StatelessWidget{
     return Center(
       child: Container(
         color: Color.fromARGB(255, 66, 165, 245),
-        child: Text("Flutter Cheatsheet",
+        child: Text("Flutter",
           style: TextStyle(
-              fontSize: 30.0
+              fontSize: 15.0
           ),
+          //textDirection: TextDirection.ltr,//正常,从左向右(不影响alignment)
+          textDirection: TextDirection.ltr,//从右向左(不影响alignment)
         ),
         //不加这句话，Container会自适应child大小;加上以后会充满屏幕
-        //alignment: FractionalOffset(0.5, 0.5),
-        alignment: AlignmentDirectional.center,//等价于上面
+        alignment:AlignmentDirectional(-1.0, 1.0),
+        //alignment: AlignmentDirectional.bottomStart,//等价于上面
       ),
     );
   }
 }
+
+//Container属性之Constraints(无子控件)
+class Constraints_Property_NoChild extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        color: Color.fromARGB(255, 66, 165, 245),
+        alignment: AlignmentDirectional(0.0, 0.0),
+        child: Container(
+          color: Colors.green,
+          constraints: BoxConstraints(
+            maxHeight: 300,
+            maxWidth: 200,
+            minWidth: 150,
+            minHeight: 150,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//Container属性之Constraints(有子控件)
+class Constraints_Property_HasChild extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        color: Color.fromARGB(255, 66, 165, 245),
+        alignment: AlignmentDirectional(0.0, 0.0),
+        child: Container(
+          color: Colors.green,
+          //child: Text("Flutter"),
+          child: Text("Flutter Cheatsheet Flutter Cheatsheet"),
+          constraints: BoxConstraints(
+            maxHeight: 300,
+            maxWidth: 200,
+            minWidth: 150,
+            minHeight: 150,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//Container属性之Constraints(有子控件、充满整个屏幕)
+class Constraints_Property_HasChild_AllScreen extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        color: Color.fromARGB(255, 66, 165, 245),
+        alignment: AlignmentDirectional(0.0, 0.0),
+        child: Container(
+          color: Colors.green,
+          //child: Text("Flutter"),
+          child: Text("Flutter"),
+          //constraints: BoxConstraints.expand(),
+          constraints: BoxConstraints.expand(
+            width: 350,
+            height: 400,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//Container属性之Margin
+//EdgeInsets.all()
+class Margin_Property_EdgeInsets_all extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        color: Color.fromARGB(255, 66, 165, 245),
+        alignment: AlignmentDirectional(0.0, 0.0),
+        child: Container(
+          color: Colors.green,
+          margin: EdgeInsets.all(20.0),
+        ),
+      ),
+    );
+  }
+}
+
+//EdgeInsets.symmetric()
+class Margin_Property_EdgeInsets_symmetric extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        color: Color.fromARGB(255, 66, 165, 245),
+        alignment: AlignmentDirectional(0.0, 0.0),
+        child: Container(
+          color: Colors.green,
+          margin: EdgeInsets.symmetric(
+            vertical: 20.0,
+            horizontal: 50.0,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//EdgeInsets.fromLTRB()
+class Margin_Property_EdgeInsets_fromLTRB extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        color: Color.fromARGB(255, 66, 165, 245),
+        alignment: AlignmentDirectional(0.0, 0.0),
+        child: Container(
+          color: Colors.green,
+          margin: EdgeInsets.fromLTRB(20.0, 30.0, 40.0, 50.0)
+        ),
+      ),
+    );
+  }
+}
+
+//EdgeInsets.only()
+class Margin_Property_EdgeInsets_only extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        color: Color.fromARGB(255, 66, 165, 245),
+        alignment: AlignmentDirectional(0.0, 0.0),
+        child: Container(
+            color: Colors.green,
+            margin: EdgeInsets.only(
+              left: 20.0,
+              bottom: 40.0,
+              top: 50.0,
+            )
+        ),
+      ),
+    );
+  }
+}
+
+//Padding Property
+//EdgeInsets.all
+class Padding_Property_EdgeInsets_all extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        color: Color.fromARGB(255, 66, 165, 245),
+        alignment: AlignmentDirectional(0.0, 0.0),
+        child: Container(
+          margin: EdgeInsets.only(
+            left: 20.0,
+            bottom: 40.0,
+            top: 50.0,
+          ),
+          padding: EdgeInsets.all(10.0),//设置内部Text控件边距
+          color: Colors.green,
+          child: Text("Flutter Cheatsheet"),
+          //不设置这个Container和子控件一样大小、这样margin设置也就没有意义了
+          constraints: BoxConstraints.expand(),
+        ),
+      ),
+    );
+  }
+}
+
