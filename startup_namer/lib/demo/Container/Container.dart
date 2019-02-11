@@ -274,3 +274,28 @@ class Padding_Property_EdgeInsets_all extends StatelessWidget{
   }
 }
 
+
+//Decoration Property
+//class Decoration_Property
+
+
+//ForegroundDecoration Property
+
+//Transform Property
+class Transform_Property extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Color.fromARGB(255, 66, 165, 245),
+      alignment: AlignmentDirectional(0.0, 0.0),
+      child: Container(
+        padding: EdgeInsets.all(40.0),
+        color: Colors.green,
+        child: Text("Flutter Cheatsheet"),  
+        transform: Matrix4.rotationZ(0.5),
+      ),
+    );
+  }
+}
+
+
