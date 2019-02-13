@@ -6,6 +6,7 @@ import 'demo/chapter03.dart';
 import 'demo/chapter04.dart';
 import 'demo/chapter05.dart';
 import 'demo/Container/Container.dart';
+import 'demo/BoxDecoration/BoxDecoration.dart';
 
 //void main() => runApp(MyApp());
 void main(){
@@ -23,24 +24,57 @@ void main(){
         //    Product(name: 'Chocolate chips'),
         //  ],
         //),
-        //Container使用
-        //home: Color_Property_Colors(),
-        //home: Color_Property_Color(),
-        //home: Child_Property(),
-        //home: Alignment_Property(),
-        //home: Alignment_FractionalOffset(),
-        //home: Alignment_AlignmentDirectional(),
-        //home: Constraints_Property_NoChild(),
-        //home: Constraints_Property_HasChild(),
-        //home: Constraints_Property_HasChild_AllScreen(),
-        //home: Margin_Property_EdgeInsets_all(),
-        //home: Margin_Property_EdgeInsets_symmetric(),
-        //home: Margin_Property_EdgeInsets_fromLTRB(),
-        //home: Margin_Property_EdgeInsets_only(),
-        //home: Padding_Property_EdgeInsets_all(),
-        home: Transform_Property(),
+
+        //1、Container使用
+        //home: Container_Widget(),
+        //2、BoxDecoration使用
+        home: BoxDecoration_Widget(),
       )
     );
+}
+
+
+//一、Container
+class Container_Widget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    //return Color_Property_Colors();
+    //return Color_Property_Color();
+    //return Child_Property();
+    //return Alignment_Property();
+    //return Alignment_FractionalOffset();
+    //return Alignment_AlignmentDirectional();
+    //return Constraints_Property_NoChild();
+    //return Constraints_Property_HasChild();
+    //return Constraints_Property_HasChild_AllScreen();
+    //return Margin_Property_EdgeInsets_all();
+    //return Margin_Property_EdgeInsets_symmetric();
+    //return Margin_Property_EdgeInsets_fromLTRB();
+    //return Margin_Property_EdgeInsets_only();
+    //return Padding_Property_EdgeInsets_all();
+    return Transform_Property();
+  }
+}
+
+//二、BoxDecoration
+class BoxDecoration_Widget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    //return BoxDecoration_Colors_Widget();
+    //return Gradient_Property_default_Widget();
+    //return Gradient_Property_beginAndEnd_Widget();
+    //return TileMode_Clamp_Property_Widget();
+    //return TileMode_Mirror_Property_Widget();
+    //return TileMode_Repeated_Property_Widget();
+    //return Stops_Property_Widget();
+    //return RadialGradient_Widget();
+    //return Image_Property_Widget();
+    //return centerSlice_Property_Widget();
+    //return ColorFilter_Property_Widget();
+    //return fit_Property_Widget();
+    //return repeat_Property_Widget();
+    return matchTextDirection_Property_Widget();
+  }
 }
 
 //第一个App
