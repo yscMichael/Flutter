@@ -7,6 +7,7 @@ import 'demo/chapter04.dart';
 import 'demo/chapter05.dart';
 import 'demo/Container/Container.dart';
 import 'demo/BoxDecoration/BoxDecoration.dart';
+import 'demo/Row_Column/Row_Column.dart';
 
 //void main() => runApp(MyApp());
 void main(){
@@ -28,7 +29,9 @@ void main(){
         //1、Container使用
         //home: Container_Widget(),
         //2、BoxDecoration使用
-        home: BoxDecoration_Widget(),
+        //home: BoxDecoration_Widget(),
+        //3、Row/Column使用
+        home: Row_Column_Widget(),
       )
     );
 }
@@ -73,7 +76,28 @@ class BoxDecoration_Widget extends StatelessWidget{
     //return ColorFilter_Property_Widget();
     //return fit_Property_Widget();
     //return repeat_Property_Widget();
-    return matchTextDirection_Property_Widget();
+    //return matchTextDirection_Property_Widget();
+    //return Border_All_Property_Widget();
+    //return Border_Border_Property_Widget();
+    //return Border_BorderDirectional_Property_Widget();
+    //return borderRadius_Property_Widget();
+    //return BorderRadius_horizontal_Widget();
+    //return BorderRadius_vertical_Widget();
+    //return BorderRadius_only_Widget();
+    //return Radius_elliptical_Widget();
+    //return boxShadow_colorAndoffset_Property_Widget();
+    //return boxShadow_blurRadius_Property_Widget();
+    //return boxShadow_spreadRadius_Property_Widget();
+    //return boxShadow_multipleAndBoxShadow_Property_Widget();
+    return shape_Property_Widget();
+  }
+}
+
+//三、Row/Column
+class Row_Column_Widget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Row_Text_Widget();
   }
 }
 

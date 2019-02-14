@@ -374,3 +374,453 @@ class matchTextDirection_Property_Widget extends StatelessWidget{
   }
 }
 
+//Border Property
+//Border.all
+class Border_All_Property_Widget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 300.0,
+        height: 300.0,
+        color: Colors.white,
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.green,
+              width: 5.0,
+              style: BorderStyle.solid
+            ),
+            image: DecorationImage(
+               image:AssetImage("images/JL-Logo-150.png")
+             )    
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//Border Property
+//Border
+class Border_Border_Property_Widget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 300.0,
+        height: 300.0,
+        color: Colors.white,
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border(
+              top: BorderSide(
+                color: Colors.green,
+                width: 5.0,
+                style: BorderStyle.solid
+              )
+            ),
+            image: DecorationImage(
+                image:AssetImage("images/JL-Logo-150.png")
+            )
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//Border Property
+//BorderDirectional
+class Border_BorderDirectional_Property_Widget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 300,
+        height: 300,
+        color: Colors.white,
+        child: Container(
+          decoration: BoxDecoration(
+            border: BorderDirectional(
+              top: BorderSide(
+                color: Colors.green,
+                width: 5.0,
+                style: BorderStyle.solid
+              ),
+              start: BorderSide(
+                color: Colors.green,
+                width: 5.0,
+                style: BorderStyle.solid
+              )
+            ),
+            image: DecorationImage(
+              image:AssetImage("images/JL-Logo-150.png")
+            )    
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//borderRadius Property
+//BorderRadius.circular
+class borderRadius_Property_Widget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 300.0,
+        height: 300.0,
+        color: Colors.white,
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.green,
+              width: 5.0,
+              style: BorderStyle.solid
+            ),
+            //borderRadius:BorderRadius.all(Radius.circular(20.0)),
+            borderRadius:BorderRadius.circular(20.0),
+            image: DecorationImage(
+                image:AssetImage("images/JL-Logo-150.png")
+            )
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//borderRadius Property
+//BorderRadius.horizontal
+class BorderRadius_horizontal_Widget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 300.0,
+        height: 300.0,
+        color: Colors.white,
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.green,
+              width: 5.0,
+              style: BorderStyle.solid
+            ),
+            borderRadius: BorderRadius.horizontal(
+              left: Radius.circular(20.0),
+              //right: new Radius.circular(20.0),
+            ),
+            image: DecorationImage(
+                image: AssetImage("images/JL-Logo-150.png")
+            )
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//borderRadius Property
+//BorderRadius.vertical
+class BorderRadius_vertical_Widget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 300.0,
+        height: 300.0,
+        color: Colors.white,
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.green,
+              width: 5.0,
+              style: BorderStyle.solid
+            ),
+            borderRadius: BorderRadius.vertical(
+              top: Radius.circular(20.0),
+              //bottom: new Radius.circular(20.0),
+            ),
+            image: DecorationImage(
+                image: AssetImage("images/JL-Logo-150.png"),
+            )  
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//borderRadius Property
+//BorderRadius.only
+class BorderRadius_only_Widget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 300.0,
+        height: 300.0,
+        color: Colors.white,
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.green,
+              width: 5.0,
+              style: BorderStyle.solid
+            ),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(20.0),
+              //topRight: Radius.circular(20.0),
+              bottomRight: Radius.circular(20.0),
+              //bottomLeft: Radius.circular(20.0),
+            ),
+            image: DecorationImage(
+                image:AssetImage("images/JL-Logo-150.png")
+            )  
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//borderRadius Property
+//Radius.elliptical
+class Radius_elliptical_Widget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+        child: Container(
+          width: 300.0,
+          height: 300.0,
+          color: Colors.white,
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.green,
+                width: 5.0,
+                style: BorderStyle.solid
+              ),
+              borderRadius: BorderRadius.only(
+                 topLeft: Radius.elliptical(40.0, 10.0),
+                 //topRight: Radius.circular(20.0),
+                 bottomRight: Radius.circular(20.0),
+                 //bottomLeft: Radius.circular(20.0),
+              ),
+              image: DecorationImage(
+                  image:AssetImage("images/JL-Logo-150.png")
+              )
+            ),
+          ),
+        ),
+    );
+  }
+}
+
+//boxShadow Property
+//color和offset
+class boxShadow_colorAndoffset_Property_Widget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 200.0,
+        height: 200.0,
+        color: Colors.white,
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            border: Border.all(
+              color: Colors.green,
+              width: 5.0,
+              style: BorderStyle.solid
+            ),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.elliptical(40.0, 10.0),
+              bottomLeft: Radius.circular(20.0),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.red,
+                offset: Offset(20.0, 10.0)
+              )
+            ],
+            image: DecorationImage(
+                image:AssetImage("images/JL-Logo-150.png")
+            )
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//boxShadow Property
+//blurRadius
+class boxShadow_blurRadius_Property_Widget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 300.0,
+        height: 300.0,
+        color: Colors.white,
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            border: Border.all(
+              color: Colors.green,
+              width: 5.0,
+              style: BorderStyle.solid
+            ),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.elliptical(40.0, 10.0),
+              bottomLeft: Radius.circular(20.0),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.red,
+                offset: Offset(20.0, 10.0),
+                blurRadius: 20.0,
+              )
+            ],
+            image: DecorationImage(
+                image: AssetImage("images/JL-Logo-150.png")
+            )
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//boxShadow Property
+//spreadRadius
+class boxShadow_spreadRadius_Property_Widget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 300.0,
+        height: 300.0,
+        color: Colors.white,
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            border: Border.all(
+              color: Colors.green,
+              width: 5.0,
+              style: BorderStyle.solid
+            ),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.elliptical(40.0, 10.0),
+              bottomLeft: Radius.circular(20.0),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.red,
+                offset: Offset(20.0, 10.0),
+                blurRadius: 20.0,
+                spreadRadius: 40.0,
+              )
+            ],
+            image: DecorationImage(
+                image:AssetImage("images/JL-Logo-150.png")
+            )
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//boxShadow Property
+//multiple BoxShadow
+class boxShadow_multipleAndBoxShadow_Property_Widget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 300.0,
+        height: 300.0,
+        color: Colors.white,
+        child: Container(
+          decoration: BoxDecoration(
+              color: Colors.white,
+              border: Border.all(
+                  color: Colors.green,
+                  width: 5.0,
+                  style: BorderStyle.solid
+              ),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.elliptical(40.0, 10.0),
+                bottomLeft: Radius.circular(20.0),
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.red,
+                  offset: Offset(20.0, 10.0),
+                  blurRadius: 20.0,
+                  spreadRadius: 40.0,
+                ),
+                BoxShadow(
+                  color: Colors.yellow,
+                  offset: Offset(20.0, 10.0),
+                  blurRadius: 20.0,
+                  spreadRadius: 20.0,
+                ),
+                BoxShadow(
+                  color: Colors.green,
+                  offset: Offset(10.0, 5.0),
+                  blurRadius: 20.0,
+                  spreadRadius: 5.0,
+                )
+              ],
+              image: DecorationImage(
+                  image:AssetImage("images/JL-Logo-150.png")
+              )
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//shape Property
+class shape_Property_Widget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 300.0,
+        height: 300.0,
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            border: Border.all(
+              color: Colors.green,
+              width: 5.0,
+              style: BorderStyle.solid
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.red,
+                offset: Offset(20.0, 10.0),
+                blurRadius: 20.0,
+                spreadRadius: 40.0
+              )
+            ],
+            shape: BoxShape.circle,
+            image: DecorationImage(
+                image: AssetImage("images/JL-Logo-150.png")
+            )
+          ),
+        ),
+      ),
+    );
+  }
+}
