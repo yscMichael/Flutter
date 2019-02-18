@@ -99,21 +99,19 @@ class Row_Column_Widget extends StatelessWidget{
   Widget build(BuildContext context) {
     //return Row_Text_Widget();
     //return Column_Text_Widget();
-    //return CrossAxisAlignment_row_Propery_Widget();
-    //return CrossAxisAlignment_column_Propery_Widget();
+    //return CrossAxisAlignment_start_Propery_Widget();
+    //return CrossAxisAlignment_center_Propery_Widget();
+    //return CrossAxisAlignment_end_Propery_Widget();
+    //return CrossAxisAlignment_stretch_Propery_Widget();
     //return CrossAxisAlignment_withOutbaseline_Widget();
     //return CrossAxisAlignment_withbaseline_Widget();
-    //return TextDirection_row_center_rtl_Propery();
-    //return TextDirection_row_center_ltr_Propery();
-    //return TextDirection_Row_start_ltr_Propery();
-    //return TextDirection_Row_start_rtl_Propery();
-    return VerticalDirection_row_start_down_Widget();
-    //return VerticalDirection_row_start_up_Widget();
-    //return MainAxisAlignment_Propery_Widget();
-    //return MainAxisSize_max_row_Propery_Widget();
-    //return MainAxisSize_max_Column_Propery_Widget();
-    //return MainAxisSize_min_row_Propery_Widget();
-    //return MainAxisSize_min_Column_Propery_Widget();
+    //return MainAxisAlignment_start_Propery_Widget();
+    return TextDirection_ltr_Propery();
+    //return TextDirection_rtl_Propery();
+    //return VerticalDirection_down_Propery();
+    //return VerticalDirection_up_Propery();
+    //return MainAxisSize_max_Propery_Widget();
+    //return MainAxisSize_min_Propery_Widget();
   }
 }
 
