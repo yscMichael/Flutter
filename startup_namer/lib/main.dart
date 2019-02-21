@@ -8,6 +8,7 @@ import 'demo/chapter05.dart';
 import 'demo/Container/Container.dart';
 import 'demo/BoxDecoration/BoxDecoration.dart';
 import 'demo/Row_Column/Row_Column.dart';
+import 'demo/Image/Image.dart';
 
 //void main() => runApp(MyApp());
 void main(){
@@ -31,7 +32,9 @@ void main(){
         //2、BoxDecoration使用
         //home: BoxDecoration_Widget(),
         //3、Row/Column使用
-        home: Row_Column_Widget(),
+        //home: Row_Column_Widget(),
+        //4、Image
+        home: Image_Widget(),
       )
     );
 }
@@ -112,6 +115,14 @@ class Row_Column_Widget extends StatelessWidget{
     //return VerticalDirection_up_Propery();
     //return MainAxisSize_max_Propery_Widget();
     //return MainAxisSize_min_Propery_Widget();
+  }
+}
+
+//四、image
+class Image_Widget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return image_widget();
   }
 }
 
